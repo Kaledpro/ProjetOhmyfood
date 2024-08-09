@@ -22,10 +22,12 @@ variables {
 /*Header*/
 
 .navbar__logo {
+	position: relative;
 	width: 100%;
 	padding: 14px 0px;
 	display: flex;
 	justify-content: center;
+	box-shadow: 0px -12px 9px 7px;
 }
 
 .navbar__logo img {
@@ -41,7 +43,7 @@ variables {
 	font-size: 16px;
 	font-weight: 500;
 	box-sizing: border-box;
-	box-shadow: 0 0px 4px 0 #000000;
+	box-shadow: 0px 2px 9px -5px;
 }
 
 #zonerechercher {
@@ -98,6 +100,8 @@ input.fullicon {
 .emptyicon {
 	font-size: 26px;
 	cursor: pointer;
+	position: relative;
+	bottom: 26px;
 }
 
 .emptyicon::before {
@@ -105,7 +109,6 @@ input.fullicon {
 	content: "\f004";
 	font-weight: 300;
 	position: relative;
-	top: 30px
 }
 /*content*/
 
@@ -138,6 +141,7 @@ Body {
 	text-align: center;
 	color: #353535;
 }
+
 
 .button {
 	height: 50px;
@@ -335,24 +339,37 @@ ul.footer__content__list {
 
 @media screen and (min-width: 1024px) {
 
+.navbar__logo {
+	box-shadow: unset;
+}
+
 .navbar__logo img {
 	width: 14%; 
 }
 
+.zone-recherche {
+	box-shadow: unset;
+}
+
+
 .sectionintro {
-	padding-bottom: 18px;
+	padding-bottom: 30px;
 }	
 .sectionintro h1 {
 	font-size: 40px;
 }	
+.section__title h1 {
+	width: 90%;
+	margin: 0;
+}
 
 .sectionrestaur__badge {
 	
 }
 
 .sectionpage {
+	margin-bottom: 20px;
 	height: auto;
-	margin: 50px 0px;
 }
 
 .section__title {
@@ -360,7 +377,7 @@ ul.footer__content__list {
 }
 
 .sectionpage__numbers {
-	width: 32px;
+	width: 4%;
 	top: 0px;
 	left: 12px;
 }
@@ -393,6 +410,7 @@ ul.footer__content__list {
 
 
 .footer__content {
+	padding-top: 30px;
 	display: flex;
     flex-direction: row-reverse;
 }
