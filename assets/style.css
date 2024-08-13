@@ -16,6 +16,7 @@ variables {
 	min-width: 320px;
     max-width: 1440px;
 	box-sizing: border-box;
+	transition: opacity 8s ease-in;
 }
 
 
@@ -72,6 +73,7 @@ a {
 	width: 89%;
 	text-decoration: none;
     color: initial;
+	transform: opacity 10s;
 }
 
 .section__title {
