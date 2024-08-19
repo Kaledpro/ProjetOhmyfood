@@ -5,10 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
-variables {
-  $main-color: #E44444; /* var(--main-color) */
-  $second-color: #CD487B; /* var(--second-color) */
-  $third-color: #EDEDED; /* var(--third-color) */
+:root {
+  Main-color: #9356DC; /* var(--main-color) */
+  back-color: #EAEAEA; /* var(--second-color) */
+  Third-color: ; /* var(--third-color) */				
 }
 
 .main-container {
@@ -16,9 +16,17 @@ variables {
 	min-width: 320px;
     max-width: 1440px;
 	box-sizing: border-box;
-	transition: opacity 8s ease-in;
+	animation: 5s ease-in-out forwards loader;
 }
 
+
+@keyframes loader {
+ 0%   {opacity: 0;}
+ 25%  {opacity:0.25;}
+ 50%  {opacity:0.50;}
+ 75%  {opacity:0.75;}
+ 100% {opacity:1;}
+}
 
 /*Header*/
 
@@ -73,7 +81,6 @@ a {
 	width: 89%;
 	text-decoration: none;
     color: initial;
-	transform: opacity 10s;
 }
 
 .section__title {
@@ -97,13 +104,16 @@ input.fullicon {
 	content: "\f004";
 	font-weight: 900;
 	color: #9356DC;
+	transition: all 500ms;
 }
 
 .emptyicon {
+	height: 32px;
+	position: relative;
+	bottom: 20px;
+	left: 90%;
 	font-size: 26px;
 	cursor: pointer;
-	position: relative;
-	bottom: 26px;
 }
 
 .emptyicon::before {
@@ -174,6 +184,8 @@ Body {
 
 .sectionallarticles{
 	width: 100%;
+	/*width: 375px;
+  min-width: 80%; */
 }
 
 
@@ -239,7 +251,7 @@ Body {
 	width: 30%;
 	height: 30px;
 	position: absolute;
-	left: 64%;
+	right: 26px;
 	top: 0;
     margin-top: 15px;
 	display: flex;
@@ -272,7 +284,7 @@ Body {
 }
 
 .sectionrestaur__cards__texts p {
-	width: 80%;
+	width: 90%;
 	margin: -10px 0px;
 	font-size: 18px;
 	font-weight: 300;
@@ -335,8 +347,21 @@ ul.footer__content__list {
 }
 
 
-
 /*Media queries*/
+/* for tablets devices*/
+
+@media screen and (min-width: 768px) {
+
+.sectionallarticles{
+	width: 75%;
+}
+
+.emptyicon {
+	left: 94%;
+}
+
+}
+
 /* for desktop devices*/
 
 @media screen and (min-width: 1024px) {
@@ -353,7 +378,6 @@ ul.footer__content__list {
 	box-shadow: unset;
 }
 
-
 .sectionintro {
 	padding-bottom: 30px;
 }	
@@ -363,10 +387,6 @@ ul.footer__content__list {
 .section__title h1 {
 	width: 90%;
 	margin: 0;
-}
-
-.sectionrestaur__badge {
-	
 }
 
 .sectionpage {
@@ -410,7 +430,6 @@ ul.footer__content__list {
 	width: 38%;
 }
 
-
 .footer__content {
 	padding-top: 30px;
 	display: flex;
@@ -422,10 +441,5 @@ ul.footer__content__list {
 	gap: 20px;
 	display: flex;
     align-items: center;
-}
-
-
-
-
-	
+}	
 }
