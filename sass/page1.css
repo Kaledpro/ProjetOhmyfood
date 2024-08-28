@@ -83,7 +83,8 @@ input.fullicon {
 	content: "\f004";
 	font-weight: 900;
 	color: #9356DC;
-	transition: all 500ms;
+	transition: all 800ms;
+	border-color: black;
 }
 
 .emptyicon {
@@ -97,7 +98,8 @@ input.fullicon {
 	content: "\f004";
 	font-weight: 300;
 	position: relative;
-	top: 2px
+	top: 2px;
+	transition: color 800ms;
 }
 
 .section__menu {
@@ -111,17 +113,6 @@ input.fullicon {
 	border-style: solid;
     border-width: 0px;
 	border-radius: 30px 30px 0px 0px;
-	animation: 2s linear loade;
-}
-
-@keyframes faded {
- from {
-	 opacity: 0;
- }
- to {
-	opacity: 1;
-}
-
 }
 
 .section__menu__title {
@@ -166,15 +157,18 @@ input.fullicon {
 	border-radius: 15px;
 	box-shadow: 0 2px 8px -4px #000000;
 	overflow: hidden;
-	transition: width 2s ease;
 	text-overflow: ellipsis;
 	cursor: pointer;
-	animation: 4s ease forwards slide;
 }
+
+.plats__slide{
+	animation: slide 2s forwards;
+}
+
 
 @keyframes slide {
 	from {
-	left: -50px
+	left: -50px;
 	}
 	to {
 	left: 0px;	
@@ -211,8 +205,6 @@ input.fullicon {
 	text-overflow: ellipsis;
 	display: block;
 	white-space: nowrap;
-	transition: all 10s ease-in;
-	
 }
 
 .section__entree__subtext--euro {
@@ -222,7 +214,6 @@ input.fullicon {
 	position: absolute;
 	right: 10px;
 	top: 40px;
-	
 }
 
 .section__card:hover .section__entree__subtext--euro {
@@ -268,20 +259,25 @@ input.fullicon {
 }
 
 .button {
-	margin-top: 10px;
-	width: 200px;
 	height: 50px;
-	display: grid;
-	align-items: center;
 	border: 0px;
 	border-radius: 25px;
 	color: #FFFFFF;
 	background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+	padding: 12px 18px;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 18.75px;
-	box-shadow: 0px 2px 10px 0px #000000;
+	box-shadow: 0px 4px 10px 0px rgb(0 0 0 / 40%);
+	cursor: pointer;
+	transition: all 400ms;
 }
+
+.button:hover {
+	box-shadow:  0px 4px 10px 0px rgb(0 0 0 / 80%);
+	opacity: 0.88;
+}
+
 
 /*Footer*/
 
@@ -314,6 +310,7 @@ ul.footer__content__list {
 .footer__content__list i {
 	width: 14px;
 }
+
 
 
 /*Media queries*/
