@@ -181,7 +181,7 @@ input.fullicon {
 	left: -100px;	
 	}
 	to {
-	left: initial;	
+	left: 0px;	
 }
 }
 

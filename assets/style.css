@@ -34,14 +34,6 @@
 	 font-size: 26px;
 }
 
-/*@keyframes loader {
- 0%   {opacity: 0;}
- 25%  {opacity:0.25;}
- 50%  {opacity:0.50;}
- 75%  {opacity:0.75;}
- 100% {opacity:1;}
-}*/
-
 @keyframes loader {
 	100%
 	{ visibility: hidden; }
@@ -209,8 +201,6 @@ Body {
 
 .sectionallarticles{
 	width: 100%;
-	/*width: 375px;
-  min-width: 80%; */
 }
 
 
@@ -408,6 +398,11 @@ ul.footer__content__list {
 .sectionintro h1 {
 	font-size: 40px;
 }	
+
+.section__title {
+	width: 83%;
+}
+
 .section__title h1 {
 	width: 90%;
 	margin: 0;
@@ -416,10 +411,6 @@ ul.footer__content__list {
 .sectionpage {
 	margin-bottom: 20px;
 	height: auto;
-}
-
-.section__title {
-	width: 83%;
 }
 
 .sectionpage__numbers {
